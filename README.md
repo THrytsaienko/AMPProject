@@ -8,3 +8,5 @@
 [AMP on Github](https://github.com/ampproject/amphtml/blob/master/README.md)
 <br>
 [Validator for AMP HTML Document](https://validator.ampproject.org/)
+<br>
+Run with `http-server`

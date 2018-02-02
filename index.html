@@ -1,0 +1,69 @@
+<!doctype html>
+<html ⚡>
+<meta charset="utf-8">
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+<link rel="canonical" href="index.html">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>
+    .container {
+        width: 900px;
+        margin: 0 auto;
+    }
+    .row {
+        display: inline-block;
+    }
+    amp-img {
+        padding: 50px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aspernatur repellendus, repudiandae natus cumque ipsam, praesentium doloribus id, distinctio molestiae beatae temporibus? Nam, delectus in dolore suscipit, dolor vitae ducimus architecto, veritatis distinctio amet recusandae. Illo quam cum nostrum. Suscipit mollitia cum quae assumenda sapiente, modi ad repudiandae. Non, cumque.</p>
+        <div class="row">
+            <figure>
+                <amp-img on="tap:lightbox1" role="button" tabindex="0" src="images/sunflower.jpg" alt="Sunflower" title="Sunflower"
+                    layout="responsive" width="600" height="500"></amp-img>
+                <figcaption>Sunflower</figcaption>
+            </figure>
+            <figure>
+                <amp-img on="tap:lightbox1" role="button" tabindex="1" src="images/sunflower.jpg" alt="Sunflower" title="Sunflower"
+                    layout="responsive" width="600" height="500"></amp-img>
+                <figcaption>Sunflower</figcaption>
+            </figure>
+            <figure>
+                <amp-img on="tap:lightbox1" role="button" tabindex="2" src="images/sunflower.jpg" alt="Sunflower" title="Sunflower"
+                    layout="responsive" width="600" height="500"></amp-img>
+                <figcaption>Sunflower</figcaption>
+            </figure>
+            <amp-image-lightbox id="lightbox1"
+                layout="nodisplay"></amp-image-lightbox>
+        </div> 
+        <amp-carousel width="400"
+            height="300"
+            layout="responsive"
+            type="slides"
+            autoplay
+            delay="2000">
+            <amp-img src="/img/image1.jpg"
+                width="400"
+                height="300"
+                layout="responsive"
+                alt="a sample image"></amp-img>
+            <amp-img src="/img/image2.jpg"
+                width="400"
+                height="300"
+                layout="responsive"
+                alt="another sample image"></amp-img>
+            <amp-img src="/img/image3.jpg"
+                width="400"
+                height="300"
+                layout="responsive"
+                alt="and another sample image"></amp-img>
+        </amp-carousel>
+    </div>
+</body>
+</html>
