@@ -15,15 +15,24 @@
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 <style amp-custom>
     .container {
-        width: 1200px;
-        margin: 0 auto;
+        max-width: 600px;
+        margin: auto;
+        padding: 0 18px;
         font-family: 'Lobster', cursive;
     }
-    amp-img {
-        display: inline-block;
-        margin: 40px;
-        width: 200px;
-        height: 100px;
+    h1 {
+        text-align: center;
+        color: darkblue;
+    }
+    p {
+        text-align: justify;
+        text-indent: 30px;
+    }
+    figure {
+        margin: 40px auto;
+    }
+    amp-video, amp-youtube, amp-facebook, amp-instagram {
+        margin-bottom: 40px;
     }
     @font-face { font-family: 'Roboto Slab'; font-style: normal; font-weight: 400; src: local('Roboto Slab'), url(https://fonts.googleapis.com/css?family=Lobster)}
 </style>
@@ -31,61 +40,73 @@
 <body>
     <div class="container">
         <h1>Hello World!</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aspernatur repellendus, repudiandae natus cumque ipsam, praesentium doloribus id, distinctio molestiae beatae temporibus? Nam, delectus in dolore suscipit, dolor vitae ducimus architecto, veritatis distinctio amet recusandae. Illo quam cum nostrum. Suscipit mollitia cum quae assumenda sapiente, modi ad repudiandae. Non, cumque.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aspernatur repellendus, repudiandae natus cumque ipsam, praesentium doloribus id, distinctio molestiae beatae temporibus? Nam, delectus in dolore suscipit, dolor vitae ducimus architecto, veritatis distinctio amet recusandae. Illo quam cum nostrum. Suscipit mollitia cum quae assumenda sapiente, modi ad repudiandae.</p>
         <hr>
-        <amp-img on="tap:lightbox1" role="button" tabindex="0" src="/images/1.jpg" alt="Photo 1" title="Photo 1" layout="responsive" width="200" height="200"></amp-img>
-        <amp-img on="tap:lightbox1" role="button" tabindex="0" src="/images/2.jpg" alt="Photo 2" title="Photo 2" layout="responsive"
-            width="200" height="200"></amp-img>
-        <amp-img on="tap:lightbox1" role="button" tabindex="0" src="/images/3.jpg" alt="Photo 3" title="Photo 3" layout="responsive"
-    width="200" height="200"></amp-img>
+        <figure>
+            <amp-img on="tap:lightbox1" role="button" tabindex="0" src="/images/1.jpg" alt="Photo 1" title="Photo 1" layout="responsive"
+                width="300" height="250"></amp-img>
+            <figcaption>Lorem, ipsum dolor.</figcaption>
+        </figure>
+
+        <figure>
+            <amp-img on="tap:lightbox1" role="button" tabindex="0" src="/images/2.jpg" alt="Photo 2" title="Photo 2" layout="responsive" width="300" height="250"></amp-img>
+            <figcaption>Lorem, ipsum dolor.</figcaption>
+        </figure>
+
+        <figure>
+            <amp-img on="tap:lightbox1" role="button" tabindex="0" src="/images/3.jpg" alt="Photo 3" title="Photo 3" layout="responsive" width="300" height="250"></amp-img>
+            <figcaption>Lorem, ipsum dolor.</figcaption>
+        </figure>
         <amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
         <hr>
-        <amp-carousel width="1200"
-            height="500"
+        <amp-carousel 
+            width="300"
+            height="300"
             layout="responsive"
             type="slides"
             autoplay
             delay="2000">
-                <amp-img src="/images/slide1.jpg"
-                width="1200"
-                height="500"
-                layout="responsive"
-                alt="a sample image"></amp-img>
-                <amp-img src="/images/slide2.jpg"
-                width="1200"
-                height="500"
-                layout="responsive"
-                alt="another sample image"></amp-img>
-                <amp-img src="/images/slide3.jpg"
-                width="1200"
-                height="500"
-                layout="responsive"
-                alt="and another sample image"></amp-img>
-                <amp-img src="/images/slide4.jpg"
-                width="1200"
-                height="500"
-                layout="responsive"
-                alt="and another sample image"></amp-img>
-                <amp-img src="/images/slide5.jpg"
-                width="1200"
-                height="500"
-                layout="responsive"
-                alt="and another sample image"></amp-img>
+            <amp-img src="/images/slide1.jpg"
+            width="300"
+            height="300"
+            layout="responsive"
+            alt="a sample image"></amp-img>
+            <amp-img src="/images/slide2.jpg"
+            width="300"
+            height="300"
+            layout="responsive"
+            alt="another sample image"></amp-img>
+            <amp-img src="/images/slide3.jpg"
+            width="300"
+            height="300"
+            layout="responsive"
+            alt="and another sample image"></amp-img>
+            <amp-img src="/images/slide4.jpg"
+            width="300"
+            height="300"
+            layout="responsive"
+            alt="and another sample image"></amp-img>
+            <amp-img src="/images/slide5.jpg"
+            width="300"
+            height="300"
+            layout="responsive"
+            alt="and another sample image"></amp-img>
         </amp-carousel>
         
-
-        <amp-video width="900" height="500" src="/video/video.mp4" poster="/images/image-for-video.jpg" layout="responsive" controls="controls">
-            <div fallback>
-                <p>Your browser doesn't support HTML5 video.</p>
-            </div>
-            <source type="video/mp4" src="/video/video.mp4">
+        <amp-video src="./video/nature.mp4"
+            controls
+            width="300" 
+            height="200" 
+            layout="responsive"
+            loop>
         </amp-video>
 
-        <amp-youtube width="480" height="270" layout="responsive" data-videoid="0-7IHOXkiV8">
+        <amp-youtube width="300" height="200" layout="responsive" data-videoid="0-7IHOXkiV8">
         </amp-youtube>
 
-        <amp-facebook width="1200" height="600" layout="responsive" data-href="https://www.facebook.com/SpaceX/videos/10160470036305131/?hc_ref=ARRnEInsXuRYnOxCVXdsE_g-7zH9DFeXbPaO9yvdGwhJK_xcA_ebeCXLN0eCiCi21lg">
-        </amp-facebook>
+        <amp-facebook width="300" height="200" layout="responsive" data-href="https://www.facebook.com/zuck/posts/10104501954164561/"></amp-facebook>
+
+        <amp-facebook width="300" height="200" layout="responsive" data-href="https://www.facebook.com/friends.tv/videos/10155159366374576/"></amp-facebook>
 
         <amp-instagram data-shortcode="BbQpJN5j-2N"
             data-captioned
